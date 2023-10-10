@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.dependency 'GCDWebServer'
   s.ios.deployment_target = '12.0'
   s.swift_version = '5.0'
-#  s.source_files = 'Utilities/Utilities/**/*'
+  s.source_files = 'Utilities/Utilities'
   #s.resource_bundles = {
   #  'PackageResources'  => ['Utilities/Utilities/PackageResources/**/*']
   #}
