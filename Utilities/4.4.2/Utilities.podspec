@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = 'Utilities'
   s.version          = '4.4.2'
   s.summary          = 'Utilities'
-  s.homepage         = 'https://github.com/kiranmadhav/utilities-ios-master'
+  s.homepage         = 'https://github.mheducation.com:MHEducation/utilities-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav05@gmail.com' }
   s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'pod-support' }
