@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/kiranmadhav/utilities-ios-master'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav05@gmail.com' }
-  s.source           = { :git => 'https://github.com/kiranmadhav/utilities-ios-master.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'pod-support' }
   s.dependency 'CleanroomLogger', '~> 2.2.3'
   s.dependency 'PromiseKit', '~> 6.10.0'
   s.dependency 'GCDWebServer'
