@@ -11,10 +11,12 @@ Pod::Spec.new do |s|
   s.dependency 'GCDWebServer'
   s.ios.deployment_target = '12.0'
   s.swift_version = '5.0'
-  s.source_files = 'Utilities/Utilities/**/*.{swift,h,m,xlib,storyboard}'
-  s.resource_bundles = {
-    'PackageResources'  => ['Utilities/Utilities/PackageResources/*/**']
- }
+  s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}','Utilities/Utilities/PackageResources/**/*.{swift,h,m}'
+#  s.resource_bundles = {
+#    'PackageResources'  => ['Utilities/Utilities/PackageResources/*/**']
+# }
+  s.resource = 'Utilities/Utilities/PackageResources/*/**'
+
 # spec.exclude_files = [ 'target_files/target1/**', 'target_files/target3/**' ]
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
