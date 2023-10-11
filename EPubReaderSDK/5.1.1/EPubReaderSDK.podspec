@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   
   # Specify the source and the files
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
-  s.source_files = 'iOS/**/*.swift'
+  s.source_files = 'EPubFoundation/**/*.{c,h}, iOS/EPubReaderSDK/**/*.swift', iOS/EPubFoundation/**/*.h'
   
   # Specify the dependencies
   s.dependency 'QBPopupMenu', '~> 0.1.0'
@@ -21,8 +21,6 @@ Pod::Spec.new do |s|
   s.dependency 'SwCrypt', '~> 5.1.3'
   s.dependency 'Utilities', '~> 4.0.1'
 
-  # Specify the public header files
-  
   s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
   
   s.resources = 'iOS/EPubReaderSDK/PackageResources/css',
@@ -30,8 +28,7 @@ Pod::Spec.new do |s|
                'iOS/EPubReaderSDK/PackageResources/js',
                'iOS/EPubReaderSDK/PackageResources/images'
 
-  # Specify the test target(s)
-  
+ EPubReaderSDKTests
 
   # Specify any additional settings
   s.compiler_flags = '-DDEBUG'
