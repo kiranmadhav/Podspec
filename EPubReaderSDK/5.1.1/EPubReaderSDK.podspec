@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   
   # Specify the source and the files
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
-  s.source_files = 'EPubFoundation/**/*.{c,h}, iOS/EPubReaderSDK/**/*.swift', iOS/EPubFoundation/**/*.h'
+  s.source_files = 'EPubFoundation/**/*.{c,h}', 'iOS/EPubReaderSDK/**/*.swift', 'iOS/EPubFoundation/**/*.h'
   
   # Specify the dependencies
   s.dependency 'QBPopupMenu', '~> 0.1.0'
