@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav05@gmail.com' }
   s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'pod-support' }
-  s.dependency 'CleanroomLogger', '~> 2.2.3'
+  s.dependency 'CleanroomLogger', '~> 0.1.0'
   s.dependency 'PromiseKit', '~> 6.10.0'
   s.dependency 'GCDWebServer'
   s.ios.deployment_target = '11.0'
