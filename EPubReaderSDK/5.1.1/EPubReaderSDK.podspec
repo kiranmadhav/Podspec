@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '11.0'
   
   # Specify the source and the files
-  s.source = { :git => 'git@github.mheducation.com:MHEducation/EPubReaderSDK.git', :tag => s.version.to_s }
+  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
   s.source_files = 'EPubReaderSDK/**/*.swift'
   
   # Specify the dependencies
