@@ -2,11 +2,15 @@ Pod::Spec.new do |s|
   s.name = 'EPubReaderSDK'
   s.version = '5.1.1'
   s.summary = 'EPubReaderSDK'
+  
+  s.homepage         = 'https://github.mheducation.com/MHEducation/epub-reader-sdk-ios'
+  s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
+  s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
 
-  s.ios.deployment_target = '14.0'
+  s.ios.deployment_target = '12.0'
   
   # Specify the source and the files
-  s.source = { :git => 'git@github.mheducation.com:MHEducation/EPubReaderSDK.git', => s.version.to_s }
+  s.source = { :git => 'git@github.mheducation.com:MHEducation/EPubReaderSDK.git', :tag => s.version.to_s }
   s.source_files = 'EPubReaderSDK/**/*.swift'
   
   # Specify the dependencies
@@ -27,11 +31,7 @@ Pod::Spec.new do |s|
                'iOS/EPubReaderSDK/PackageResources/images'
 
   # Specify the test target(s)
-  s.test_spec 'Tests' do |test_spec|
-    test_spec.source_files = 'iOS/EPubFoundationTests/**/*.swift', 'iOS/EPubReaderSDKTests/**/*.swift'
-    test_spec.dependency 'EPubFoundation'
-    test_spec.dependency 'EPubReaderSDK'
-  end
+  
 
   # Specify any additional settings
   s.compiler_flags = '-DDEBUG'
