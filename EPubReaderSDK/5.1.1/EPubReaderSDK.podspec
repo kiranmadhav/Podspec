@@ -28,8 +28,6 @@ Pod::Spec.new do |s|
                'iOS/EPubReaderSDK/PackageResources/js',
                'iOS/EPubReaderSDK/PackageResources/images'
 
- EPubReaderSDKTests
-
   # Specify any additional settings
   s.compiler_flags = '-DDEBUG'
   s.libraries = 'xml2'
