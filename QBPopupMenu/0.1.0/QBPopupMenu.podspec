@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'git@github.mheducation.com:MHEducation/QBPopupMenu.git', :branch => 'master' }
   s.ios.deployment_target = '11.0'
   
-  s.source_files = ['Source/*.{h,m}']
+  s.source_files = ['QBPopupMenu/*.{swift,h,m}']
   
 end
