@@ -12,28 +12,21 @@ Pod::Spec.new do |s|
   # Specify the source and the files
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
-  s.subspec 'EPubFoundation' do |epubfoundation|
-    epubfoundation.source_files = 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
-    epubfoundation.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
-    epubfoundation.libraries = 'xml2'
-    epubfoundation.compiler_flags = '-DDEBUG'
-  end
 
-  s.subspec 'EPubReaderSDK' do |epubsdk|
-    epubsdk.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}'
+    s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}'
 
-    epubsdk.dependency 'QBPopupMenu', '~> 0.1.0'
-    epubsdk.dependency 'JTSImageViewController', '~> 0.1.0'
-    epubsdk.dependency 'SVGKit', '~> 3.0.0'
-    epubsdk.dependency 'SSZipArchive', '~> 2.3.0'
-    epubsdk.dependency 'SwCrypt', '~> 5.1.3'
-    epubsdk.dependency 'Utilities', '~> 4.0.1'
+    s.dependency 'QBPopupMenu', '~> 0.1.0'
+    s.dependency 'JTSImageViewController', '~> 0.1.0'
+    s.dependency 'SVGKit', '~> 3.0.0'
+    s.dependency 'SSZipArchive', '~> 2.3.0'
+    s.dependency 'SwCrypt', '~> 5.1.3'
+    s.dependency 'Utilities', '~> 4.0.1'
 
-    epubsdk.resources = 'iOS/EPubReaderSDK/PackageResources/css',
+    s.resources = 'iOS/EPubReaderSDK/PackageResources/css',
                    'iOS/EPubReaderSDK/PackageResources/html',
                    'iOS/EPubReaderSDK/PackageResources/js',
                    'iOS/EPubReaderSDK/PackageResources/images'
 
-    epubsdk.compiler_flags = '-DDEBUG'
-  end
+    s.compiler_flags = '-DDEBUG'
+
 end
