@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'EPubReaderSDK' do |epubsdk|
-    epubsdk.source_files = 'iOS/EPubReaderSDK/**/*.swift'
+    epubsdk.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}'
 
     epubsdk.dependency 'QBPopupMenu', '~> 0.1.0'
     epubsdk.dependency 'JTSImageViewController', '~> 0.1.0'
