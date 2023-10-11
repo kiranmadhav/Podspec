@@ -13,14 +13,14 @@ Pod::Spec.new do |s|
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
   s.subspec 'EPubFoundation' do |epubfoundation|
-    epubfoundation.source_files = 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
+    epubfoundation.source_files = 'EPubFoundation/**/*.{c,h}'
     epubfoundation.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
     epubfoundation.libraries = 'xml2'
     epubfoundation.compiler_flags = '-DDEBUG'
   end
 
   s.subspec 'EPubReaderSDK' do |epubsdk|
-    epubsdk.source_files = 'iOS/EPubReaderSDK/**/*.swift'
+    epubsdk.source_files = 'iOS/EPubReaderSDK/**/*.swift', 'iOS/EPubFoundation/**/*.h'
 
     epubsdk.dependency 'QBPopupMenu', '~> 0.1.0'
     epubsdk.dependency 'JTSImageViewController', '~> 0.1.0'
