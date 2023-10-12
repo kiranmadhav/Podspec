@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '14.0'
 
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
@@ -29,5 +29,6 @@ Pod::Spec.new do |s|
 
     s.compiler_flags = '-DDEBUG'
     s.libraries = 'xml2'
+    s.frameworks = 'SSZipArchive'
 
 end
