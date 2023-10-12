@@ -9,12 +9,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
 
-  # Specify the source and the files
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
- # s.static_framework = true
+    s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 
-    s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}'
+    s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}', 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
 
     s.dependency 'QBPopupMenu', '~> 0.1.0'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
@@ -29,5 +28,6 @@ Pod::Spec.new do |s|
                    'iOS/EPubReaderSDK/PackageResources/images'
 
     s.compiler_flags = '-DDEBUG'
+    s.libraries = 'xml2'
 
 end
