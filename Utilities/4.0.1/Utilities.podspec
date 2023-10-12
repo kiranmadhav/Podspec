@@ -12,9 +12,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.0'
   s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}','Utilities/Utilities/PackageResources/**/*.{swift,h,m}'
-  s.resource_bundles = {
-    'Resources'  => ['Utilities/Utilities/PackageResources/*/**']
- }
+  #s.resource_bundles = {
+  #  'Resources'  => ['Utilities/Utilities/PackageResources/*/**']
+  #}
+
+ s.resources = 'Utilities/Utilities/PackageResources/*/**'
 
  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
