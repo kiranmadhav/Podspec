@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     s.dependency 'QBPopupMenu', '~> 0.1.0'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'SVGKit', '~> 3.0.0'
-  #  s.dependency 'SSZipArchive', '~> 2.3.0'
+    s.dependency 'SSZipArchive', '~> 2.3.0'
     s.dependency 'SwCrypt', '~> 5.1.3'
     s.dependency 'Utilities', '~> 4.0.1'
 
@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
      'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
      'OTHER_LDFLAGS' => '-lxml2'
     }
-  s.framework = ['QBPopupMenu','JTSImageViewController','SVGKit','SwCrypt','Utilities']
+  s.framework = ['QBPopupMenu','JTSImageViewController','SSZipArchive','SVGKit','SwCrypt','Utilities']
 end
