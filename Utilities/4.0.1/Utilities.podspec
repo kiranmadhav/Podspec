@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   #}
 
   s.resource_bundles = {
-    'PackageResources' => [ # Match the name SPM Generates
+    'PackageResources' => [ 
        'Utilities/Utilities/**/*.xib',
        'Utilities/Utilities/**/*..xcassets',
        'Utilities/Utilities/**/*.xcassets'
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   }
 
 
- s.resources = 'Utilities/Utilities/PackageResources/*/**'
+# s.resources = 'Utilities/Utilities/PackageResources/*/**'
 
  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
