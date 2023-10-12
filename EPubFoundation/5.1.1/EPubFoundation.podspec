@@ -9,6 +9,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '11.0'
 
+s.static_framework = true
+
   # Specify the source and the files
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
