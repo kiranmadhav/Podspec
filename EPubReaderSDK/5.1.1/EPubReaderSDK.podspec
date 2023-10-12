@@ -29,6 +29,4 @@ Pod::Spec.new do |s|
 
     s.compiler_flags = '-DDEBUG'
     s.libraries = 'xml2'
-    s.framework = 'SSZipArchive'
-
 end
