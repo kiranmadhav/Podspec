@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #  'Resources'  => ['Utilities/Utilities/PackageResources/*/**']
   #}
 
-spec.resource_bundles = {
+  s.resource_bundles = {
     'PackageResources' => [ # Match the name SPM Generates
        'Utilities/Utilities/**/*.xib',
        'Utilities/Utilities/**/*..xcassets',
