@@ -24,6 +24,6 @@ s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PROJECT_DIR}/privateHeaders' }
            # ],
 
     s.libraries = 'xml2'
-    s.compiler_flags = '-DDEBUG'
+  #  s.compiler_flags = '-DDEBUG'
 
 end
