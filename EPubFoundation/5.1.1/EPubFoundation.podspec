@@ -7,16 +7,22 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '14.0'
 
-#  s.static_framework = true
-
-  # Specify the source and the files
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
     s.source_files = 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
     s.exclude_files = 'doxygen-config', 'Readme.md', 'vendor/utf8proc_data.c'
     s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
+
+    s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PROJECT_DIR}/vendor' }
+s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PROJECT_DIR}/privateHeaders' }
+
+           # cSettings: [
+           #     .headerSearchPath("vendor"),
+           #     .headerSearchPath("privateHeaders")
+           # ],
+
     s.libraries = 'xml2'
     s.compiler_flags = '-DDEBUG'
 
