@@ -27,8 +27,8 @@ Pod::Spec.new do |s|
                    'iOS/EPubReaderSDK/PackageResources/js',
                    'iOS/EPubReaderSDK/PackageResources/images'
 
-    s.compiler_flags = '-DDEBUG'
-    s.libraries = 'xml2'
+  #  s.compiler_flags = '-DDEBUG'
+  #  s.libraries = 'xml2'
 
     s.ios.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
     s.xcconfig  = {
