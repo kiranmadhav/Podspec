@@ -30,10 +30,10 @@ Pod::Spec.new do |s|
   #  s.compiler_flags = '-DDEBUG'
   #  s.libraries = 'xml2'
 
-    s.ios.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
-    s.xcconfig  = {
-     'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
-     'OTHER_LDFLAGS' => '-lxml2'
-    }
+  #  s.ios.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
+  #  s.xcconfig  = {
+  #   'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
+  #   'OTHER_LDFLAGS' => '-lxml2'
+  #  }
   #s.framework = ['QBPopupMenu','JTSImageViewController','SSZipArchive','SVGKit','SwCrypt','Utilities']
 end
