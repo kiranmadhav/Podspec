@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
     s.source_files = 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
+    s.exclude_files = 'doxygen-config', 'Readme.md', 'vendor/utf8proc_data.c'
     s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
     s.libraries = 'xml2'
     s.compiler_flags = '-DDEBUG'
