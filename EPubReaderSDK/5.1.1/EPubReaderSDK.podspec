@@ -39,9 +39,7 @@ Pod::Spec.new do |s|
     s.libraries = 'xml2'
 
     s.ios.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
-    s.xcconfig  = {
-     'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2','$SRCROOT/EPubReaderSDK/EPubFoundation/vendor','$SRCROOT/EPubReaderSDK/EPubFoundation/privateHeaders','$SRCROOT/SSZipArchive/SSZipArchive/include'
-     'OTHER_LDFLAGS' => '-lxml2'
-    }
+    s.xcconfig  = [{'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2','$SRCROOT/EPubReaderSDK/EPubFoundation/vendor','$SRCROOT/EPubReaderSDK/EPubFoundation/privateHeaders','$SRCROOT/SSZipArchive/SSZipArchive/include'},
+                   {'OTHER_LDFLAGS' => '-lxml2'}]
     s.framework = ['QBPopupMenu','JTSImageViewController','SVGKit','SwCrypt','Utilities','Alamofire','SSZipArchive']
 end
