@@ -11,12 +11,13 @@ Pod::Spec.new do |s|
 
 #  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
 
-  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :branch => 'pod-support' }
+  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :branch => 'master' }
 
     s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 
     s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}', 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
 
+    s.exclude_files = 'EPubFoundation/vendor/utf8proc_data.c' 
     s.dependency 'QBPopupMenu', '~> 0.1.0'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'SVGKit', '~> 3.0.0'
@@ -41,5 +42,5 @@ Pod::Spec.new do |s|
      'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
      'OTHER_LDFLAGS' => '-lxml2'
     }
-    s.framework = ['QBPopupMenu','JTSImageViewController','SSZipArchive','SVGKit','SwCrypt','Utilities','Alamofire']
+    s.framework = ['QBPopupMenu','JTSImageViewController','SVGKit','SwCrypt','Utilities','Alamofire']
 end
