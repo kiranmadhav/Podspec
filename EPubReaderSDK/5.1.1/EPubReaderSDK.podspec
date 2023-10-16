@@ -17,6 +17,8 @@ Pod::Spec.new do |s|
 
     s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}', 'EPubFoundation/**/*.{c,h}', 'iOS/EPubFoundation/**/*.h'
 
+    s.preserve_paths = 'EPubFoundation/vendor/utf8proc_data.c'
+
   #  s.exclude_files = 'EPubFoundation/vendor/utf8proc_data.c' 
     s.dependency 'QBPopupMenu', '~> 0.1.0'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
@@ -32,8 +34,7 @@ Pod::Spec.new do |s|
                    'iOS/EPubReaderSDK/PackageResources/images',
                    'iOS/EPubReaderSDK/PackageResources/Reader.storyboard',
                    'iOS/EPubReaderSDK/PackageResources/NavigationMenu.storyboard',
-                   'iOS/EPubReaderSDK/PackageResources/Assets.xcassets',
-                   'EPubFoundation/vendor/utf8proc_data.c'
+                   'iOS/EPubReaderSDK/PackageResources/Assets.xcassets'
 
     s.compiler_flags = '-DDEBUG'
     s.libraries = 'xml2'
