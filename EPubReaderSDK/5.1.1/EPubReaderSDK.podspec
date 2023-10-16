@@ -9,7 +9,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '13.0'
 
-  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
+#  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :tag => s.version.to_s }
+
+  s.source = { :git => 'git@github.mheducation.com:MHEducation/epub-reader-sdk-ios.git', :branch => 'pod-support' }
 
     s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 
