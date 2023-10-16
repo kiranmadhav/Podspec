@@ -25,7 +25,10 @@ Pod::Spec.new do |s|
     s.resources = 'iOS/EPubReaderSDK/PackageResources/css',
                    'iOS/EPubReaderSDK/PackageResources/html',
                    'iOS/EPubReaderSDK/PackageResources/js',
-                   'iOS/EPubReaderSDK/PackageResources/images'
+                   'iOS/EPubReaderSDK/PackageResources/images',
+                   'iOS/EPubReaderSDK/PackageResources/Reader.storyboard',
+                   'iOS/EPubReaderSDK/PackageResources/NavigationMenu.storyboard',
+                   'iOS/EPubReaderSDK/PackageResources/Assets.xcassets'
 
     s.compiler_flags = '-DDEBUG'
     s.libraries = 'xml2'
