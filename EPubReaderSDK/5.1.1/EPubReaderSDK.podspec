@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.dependency 'SVGKit', '~> 3.0.0'
     s.dependency 'SSZipArchive', '~> 2.3.0'
     s.dependency 'SwCrypt', '~> 5.1.3'
-    s.dependency 'Utilities', '~> 4.0.1'
+    s.dependency 'Utilities', '~> 4.0.2'
     s.dependency 'Alamofire', '~> 4.9.1'
 
     s.resources = 'iOS/EPubReaderSDK/PackageResources/css',
