@@ -15,11 +15,19 @@ Pod::Spec.new do |s|
 
     s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 
-    s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}','iOS/EPubFoundation/**/*.h','EPubFoundation/**/*.{c,h}'
+    s.source_files =  'iOS/EPubReaderSDK/**/*.{swift,h}',
+                      'iOS/EPubFoundation/**/*.h',
+                      'EPubFoundation/src/**/*.{c,h}',
+                      'EPubFoundation/publicHeaders/**/*.{c,h}',
+                      'EPubFoundation/privateHeaders/**/*.{c,h}',
+                      'EPubFoundation/vendor/utf8proc.h',
+                      'EPubFoundation/vendor/sha1.h',
+                      'EPubFoundation/vendor/uthash.h',
+                      'EPubFoundation/vendor/utf8proc.c',
+                      'EPubFoundation/vendor/sha1.c'
 
     s.preserve_paths = 'EPubFoundation/vendor/utf8proc_data.c'
 
-  #  s.exclude_files = 'EPubFoundation/vendor/utf8proc_data.c' 
     s.dependency 'QBPopupMenu', '~> 0.1.0'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'SVGKit', '~> 3.0.0'
