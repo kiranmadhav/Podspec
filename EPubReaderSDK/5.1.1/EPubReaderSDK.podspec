@@ -39,5 +39,5 @@ Pod::Spec.new do |s|
      'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
      'OTHER_LDFLAGS' => '-lxml2'
     }
-    s.framework = ['QBPopupMenu','JTSImageViewController','SSZipArchive','SVGKit','SwCrypt','Utilities']
+    s.framework = ['QBPopupMenu','JTSImageViewController','SSZipArchive','SVGKit','SwCrypt','Utilities','Alamofire']
 end
