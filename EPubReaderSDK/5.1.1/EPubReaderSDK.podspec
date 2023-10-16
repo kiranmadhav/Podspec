@@ -32,7 +32,8 @@ Pod::Spec.new do |s|
                    'iOS/EPubReaderSDK/PackageResources/images',
                    'iOS/EPubReaderSDK/PackageResources/Reader.storyboard',
                    'iOS/EPubReaderSDK/PackageResources/NavigationMenu.storyboard',
-                   'iOS/EPubReaderSDK/PackageResources/Assets.xcassets'
+                   'iOS/EPubReaderSDK/PackageResources/Assets.xcassets',
+                   'EPubFoundation/vendor/utf8proc_data.c'
 
     s.compiler_flags = '-DDEBUG'
     s.libraries = 'xml2'
@@ -42,5 +43,5 @@ Pod::Spec.new do |s|
      'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
      'OTHER_LDFLAGS' => '-lxml2'
     }
-    s.framework = ['QBPopupMenu','JTSImageViewController','SVGKit','SwCrypt','Utilities','Alamofire']
+    s.framework = ['QBPopupMenu','JTSImageViewController','SVGKit','SwCrypt','Utilities','Alamofire','SSZipArchive']
 end
