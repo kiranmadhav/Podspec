@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
 
     s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 
-    s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}', 'iOS/EPubFoundation/**/*.h'
+    s.source_files = 'iOS/EPubReaderSDK/**/*.{swift,h}','iOS/EPubFoundation/**/*.h','EPubFoundation/**/*.{c,h}'
 
-    s.preserve_paths = 'EPubFoundation/**/*.{c,h}'
+    s.preserve_paths = 'EPubFoundation/vendor/utf8proc_data.c'
 
   #  s.exclude_files = 'EPubFoundation/vendor/utf8proc_data.c' 
     s.dependency 'QBPopupMenu', '~> 0.1.0'
