@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.mheducation.com:MHEducation/utilities-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
-#  s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :tag => s.version.to_s }
   s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'pod-support' }
   s.dependency 'CleanroomLogger', '~> 0.1.0'
   s.dependency 'PromiseKit', '~> 6.10.0'
