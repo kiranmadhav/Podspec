@@ -6,17 +6,13 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
   s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :tag => s.version.to_s }
-  s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'pod-support' }
+  #s.source           = { :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'pod-support' }
   s.dependency 'CleanroomLogger', '~> 0.1.0'
   s.dependency 'PromiseKit', '~> 6.10.0'
   s.dependency 'GCDWebServer'
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}','Utilities/Utilities/PackageResources/**/*.{swift,h,m}'
-  #s.resource_bundles = {
-  #  'Resources'  => ['Utilities/Utilities/PackageResources/*/**']
-  #}
-
   s.resource_bundles = {
     'PackageResources' => [ 
        'Utilities/Utilities/**/*.xib',
@@ -24,9 +20,5 @@ Pod::Spec.new do |s|
        'Utilities/Utilities/**/*.xcassets'
     ]
   }
-
-
-# s.resources = 'Utilities/Utilities/PackageResources/*/**'
-
- s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
