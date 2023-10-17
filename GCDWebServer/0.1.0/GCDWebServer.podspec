@@ -17,7 +17,11 @@ s.homepage = 'https://github.com/swisspol/GCDWebServer'
   s.default_subspec = 'Core'
   
   s.subspec 'Core' do |cs|
-    cs.source_files = 'GCDWebServer/**/*.{h,m}'
+    cs.source_files = 'GCDWebServer/Core/**/*.{h,m}',
+                      'GCDWebServer/Requests/**/*.{h,m}',
+                      'GCDWebServer/Response/**/*.{h,m}'
+
+  #  s.preserve_paths = 'EPubFoundation/vendor/utf8proc_data.c'
     cs.private_header_files = "GCDWebServer/Core/GCDWebServerPrivate.h"
     cs.requires_arc = true
     cs.ios.library = 'z'
