@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license  = { :type => 'BSD', :file => 'LICENSE' }
   s.homepage = 'https://github.mheducation.com/MHEducation/GCDWebServer'
   s.summary  = 'Lightweight GCD based HTTP server for OS X & iOS (includes web based uploader & WebDAV server)'
-  s.source   = { :git => 'git@github.mheducation.com:MHEducation/GCDWebServer.git', :branch => 'master' }
+  s.source   = { :git => 'git@github.mheducation.com:MHEducation/GCDWebServer.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '13.0'
   s.tvos.deployment_target = '9.0'
