@@ -3,11 +3,9 @@ Pod::Spec.new do |s|
   s.version  = '0.1.0'
   s.author   =  { 'Pierre-Olivier Latour' => 'info@pol-online.net' }
   s.license  = { :type => 'BSD', :file => 'LICENSE' }
- s.homepage = 'https://github.mheducation.com/MHEducation/GCDWebServer'
- # s.homepage = 'https://github.com/swisspol/GCDWebServer'
+  s.homepage = 'https://github.mheducation.com/MHEducation/GCDWebServer'
   s.summary  = 'Lightweight GCD based HTTP server for OS X & iOS (includes web based uploader & WebDAV server)'
   s.source   = { :git => 'git@github.mheducation.com:MHEducation/GCDWebServer.git', :branch => 'master' }
- # s.source   = { :git => 'https://github.com/swisspol/GCDWebServer.git', :branch => 'master' }
   
   s.ios.deployment_target = '13.0'
   s.tvos.deployment_target = '9.0'
@@ -21,7 +19,6 @@ Pod::Spec.new do |s|
                       'GCDWebServer/Requests/**/*.{h,m}',
                       'GCDWebServer/Responses/**/*.{h,m}'
 
-  #  s.preserve_paths = 'EPubFoundation/vendor/utf8proc_data.c'
     cs.private_header_files = "GCDWebServer/Core/GCDWebServerPrivate.h"
     cs.requires_arc = true
     cs.ios.library = 'z'
