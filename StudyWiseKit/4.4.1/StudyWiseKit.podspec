@@ -2,8 +2,8 @@ Pod::Spec.new do |s|
   s.name             = 'StudyWiseKit'
   s.version          = '4.4.1'
   s.summary          = 'A brief description of StudyWiseKit.'
-
-  s.platform     = :ios, '14.0'
+  s.homepage         = 'https://github.mheducation.com/MHEducation/studywisekit-ios'
+  s.platform         = :ios, '13.0'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
   s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html', 
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
   
-  s.library = 'StudyWiseKit'
+  # s.library = 'StudyWiseKit'
 
   s.framework = ['JTSImageViewController','Utilities']
 
