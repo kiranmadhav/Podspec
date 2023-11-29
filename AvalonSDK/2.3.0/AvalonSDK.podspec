@@ -13,18 +13,10 @@ Pod::Spec.new do |s|
 
 #   s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 #
-#     s.source_files =  'iOS/EPubReaderSDK/**/*.{swift,h}',
-#                       'iOS/EPubFoundation/**/*.h',
-#                       'EPubFoundation/src/**/*.{c,h}',
-#                       'EPubFoundation/publicHeaders/**/*.{c,h}',
-#                       'EPubFoundation/privateHeaders/**/*.{c,h}',
-#                       'EPubFoundation/vendor/utf8proc.h',
-#                       'EPubFoundation/vendor/sha1.h',
-#                       'EPubFoundation/vendor/uthash.h',
-#                       'EPubFoundation/vendor/utf8proc.c',
-#                       'EPubFoundation/vendor/sha1.c'
-#
-#     s.preserve_paths = 'EPubFoundation/vendor/utf8proc_data.c'
+    s.source_files =  'AvalonSDK/**/*.{swift,h}'
+    s.preserve_paths = 'AvalonSDK/Info.plist',
+                       'AvalonSDK/Shared/**/*',
+
 
 
     s.dependency 'EPubReaderSDK', '~> 5.1.2'
@@ -40,7 +32,7 @@ Pod::Spec.new do |s|
 #                    'iOS/EPubReaderSDK/PackageResources/NavigationMenu.storyboard',
 #                    'iOS/EPubReaderSDK/PackageResources/Assets.xcassets'
 
-#     s.compiler_flags = '-DDEBUG'
+     s.compiler_flags = '-DDEBUG'
 #     s.libraries = 'xml2'
 
 #     s.ios.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
