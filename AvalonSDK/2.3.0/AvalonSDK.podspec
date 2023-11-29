@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '13.0'
 
-  s.source = { :git => 'git@github.mheducation.com:MHEducation/avalon-sdk-plugin.git', :tag => s.version.to_s }
+  s.source = { :git => 'git@github.mheducation.com:MHEducation/avalon-delivery-ios.git', :tag => s.version.to_s }
 
 #   s.public_header_files = 'EPubFoundation/publicHeaders/**/*.h'
 #
