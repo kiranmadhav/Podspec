@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.dependency 'StudyWiseKit', '~> 4.4.2'
     s.dependency 'Utilities', '~> 4.0.2'
     s.dependency 'Alamofire', '~> 4.9.1'
-    s.dependency 'EPubReaderSDK', '~> 5.1.2'
+#     s.dependency 'EPubReaderSDK', '~> 5.1.2'
 
 #     s.resources = 'iOS/EPubReaderSDK/PackageResources/css',
 #                    'iOS/EPubReaderSDK/PackageResources/html',
