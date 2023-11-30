@@ -25,6 +25,8 @@ Pod::Spec.new do |s|
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
+  s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+
   s.library = 'StudyWiseKit'
 
   s.framework = ['JTSImageViewController','Utilities']
