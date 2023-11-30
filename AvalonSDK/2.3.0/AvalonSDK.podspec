@@ -17,9 +17,6 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'AvalonSDK/Info.plist',
                        'AvalonSDK/Shared/**/*'
 
-
-
-    
     s.dependency 'StudyWiseKit', '~> 4.4.2'
     s.dependency 'Utilities', '~> 4.0.2'
     s.dependency 'Alamofire', '~> 4.9.1'
@@ -44,6 +41,6 @@ Pod::Spec.new do |s|
 #                                                 '$SRCROOT/SSZipArchive/SSZipArchive/include'
 #                                             ],
 #                    'OTHER_LDFLAGS' => '-lxml2'}
-                   
+
     s.framework = ['EPubReaderSDK','StudyWiseKit','Utilities','Alamofire']
 end
