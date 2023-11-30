@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 #
     s.source_files =  'AvalonSDK/**/*.{swift,h}'
     s.preserve_paths = 'AvalonSDK/Info.plist',
-                       'AvalonSDK/Shared/**/*',
+                       'AvalonSDK/Shared/**/*'
 
 
 
