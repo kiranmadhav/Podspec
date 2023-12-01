@@ -11,34 +11,34 @@ Pod::Spec.new do |s|
     s.swift_version     = '5.0'
     s.ios.deployment_target = '14.0'
 
+#     s.subspec 'ProbeImplementations' do |probe_impl|
+#         probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
+#         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
+#         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
+#         probe_impl.dependency 'Utilities'
+#         probe_impl.public_header_files = 'StudyWiseKit/**/*.h'
+#     end
+#
+#     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
+#         probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h,m}'
+#         probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
+#         probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
+#                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
+#                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
+#                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
+#                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
+#         probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
+#         probe_sdk.dependency 'JTSImageViewController'
+#         probe_sdk.dependency 'Utilities'
+#         probe_sdk.compiler_flags = '-DDEBUG'
+#     end
+
+
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
 
-    s.subspec 'ProbeImplementations' do |probe_impl|
-        probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
-        probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
-        probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
-        probe_impl.dependency 'Utilities'
-        probe_impl.public_header_files = 'StudyWiseKit/**/*.h'
-#         probe_impl.dependency 'ProbeRenderingSDK'
-    end
-
-    s.subspec 'ProbeRenderingSDK' do |probe_sdk|
-        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h,m}'
-        probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
-        probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
-                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
-                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
-                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
-                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
-        probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
-        probe_sdk.dependency 'JTSImageViewController'
-        probe_sdk.dependency 'Utilities'
-        probe_sdk.compiler_flags = '-DDEBUG'
-    end
-
-
-#   s.source_files = 'FileEncryptor/**/*.{swift,h,m}'
+  s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'
+#   'FileEncryptor/**/*.{swift,h,m}'
 
   s.public_header_files = ['StudyWiseKit/**/*.h']
 #                           'FileEncryptor/**/*.h']
