@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities', '~> 4.0.2'
-        probe_impl.dependency 'ProbeRenderingSDK', :path => 'StudyWiseKit/ProbeRenderingSDK'
+#         probe_impl.dependency 'ProbeRenderingSDK', :path => 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.public_header_files = 'StudyWiseKit/**/*.h'
     end
 
@@ -59,8 +59,8 @@ Pod::Spec.new do |s|
 
   s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
-  s.library = ['StudyWiseKit','ProbeRenderingSDK']
+#   s.library = ['StudyWiseKit','ProbeRenderingSDK']
 
-  s.framework = ['JTSImageViewController','Utilities']
+  s.framework = ['JTSImageViewController','Utilities', 'ProbeRenderingSDK']
 
 end
