@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities'
         probe_impl.public_header_files = 'StudyWiseKit/**/*.h'
-    #    probe_impl.dependency 'ProbeRenderingSDK'
+#         probe_impl.dependency 'ProbeRenderingSDK'
     end
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
@@ -38,11 +38,10 @@ Pod::Spec.new do |s|
     end
 
 
-#   s.source_files = ['StudyWiseKit/**/*.{swift,h,m}',
-#                    'FileEncryptor/**/*.{swift,h,m}']
+  s.source_files = ['FileEncryptor/**/*.{swift,h,m}']
 
-#   s.public_header_files = ['StudyWiseKit/**/*.h',
-#                           'FileEncryptor/**/*.h']
+  s.public_header_files = ['StudyWiseKit/**/*.h',
+                          'FileEncryptor/**/*.h']
 
 #   s.dependency 'JTSImageViewController', '~> 0.1.0'
 #   s.dependency 'Utilities', '~> 4.0.2'
