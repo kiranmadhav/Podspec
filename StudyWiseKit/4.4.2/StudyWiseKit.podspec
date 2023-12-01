@@ -11,9 +11,6 @@ Pod::Spec.new do |s|
   s.swift_version    = '5.0'
   s.requires_arc     = true
 
- 
-  s.source = { :git => 'git@github.mheducation.com:MHEducation/StudyWiseKit.git', :tag => spec.version.to_s }
-
   s.source_files = 'StudyWiseKit/ProbeImplementations/**/*.{h,m,c,swift}', 'StudyWiseKit/ProbeRenderingSDK/**/*.{h,m,c,swift}'
   s.resources = 'StudyWiseKit/ProbeImplementations/PackageResources/**/*', 'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/**/*.{html,js}'
   s.exclude_files = ['StudyWiseKit/ProbeImplementations/Info.plist', 'StudyWiseKit/ProbeRenderingSDK/Info.plist']
