@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.swift_version    = '5.0'
   s.requires_arc     = true
 
-  s.dependency 'JTSImageViewController', :git => 'git@github.mheducation.com:MHEducation/JTSImageViewController.git', :branch => 'main'
-  s.dependency 'Utilities', :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'master'
+  s.dependency 'JTSImageViewController', '~> 0.1.0'
+  s.dependency 'Utilities', '~> 4.0.2'
 
   s.subspec 'ProbeImplementations' do |probe_impl|
     probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.swift'
