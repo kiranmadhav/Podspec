@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities', '~> 4.0.2'
         probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
-        probe_impl.project_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
+        probe_impl.private_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
         probe_impl.framework = ['ProbeRenderingSDK', 'Utilities']
     end
 
@@ -35,14 +35,6 @@ Pod::Spec.new do |s|
         probe_sdk.framework = ['JTSImageViewController','Utilities']
         probe_sdk.compiler_flags = '-DDEBUG'
     end
-
-    s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
-                                                '$SRCROOT/StudyWiseKit/ProbeRenderingSDK'
-                                            ],
-                   'OTHER_LDFLAGS' => '-lxml2'}
-
-
-    s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
   s.libraries = ['ProbeImplementations','ProbeRenderingSDK']
 #
