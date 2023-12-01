@@ -38,14 +38,15 @@ Pod::Spec.new do |s|
     s.libraries = 'xml2'
 
     s.ios.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
-    s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
-                                                '$SRCROOT/StudyWiseKit/ProbeRenderingSDK'
-                                            ],
-                   'OTHER_LDFLAGS' => '-lxml2'}
+#     s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
+#                                                 '$SRCROOT/StudyWiseKit/ProbeRenderingSDK'
+#                                             ],
+#                    'OTHER_LDFLAGS' => '-lxml2'}
 
 
-#     s.dependency 'JTSImageViewController', '~> 0.1.0'
-#     s.dependency 'Utilities', '~> 4.0.2'
+    s.dependency 'JTSImageViewController', '~> 0.1.0'
+    s.dependency 'Utilities', '~> 4.0.2'
+    s.dependency 'StudyWiseKit/ProbeRenderingSDK'
 
 
 #   s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'
