@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.dependency 'Utilities', '~> 4.0.2'
 
     s.subspec 'ProbeImplementations' do |probe_impl|
-        probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.swift'
+        probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities'
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
-        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.swift'
+        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/.{swift,h,m}'
         probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
         probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
