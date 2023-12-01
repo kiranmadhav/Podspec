@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
         probe_impl.dependency 'Utilities', '~> 4.0.2'
 #         probe_impl.dependency 'ProbeRenderingSDK', :path => 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.public_header_files = 'StudyWiseKit/**/*.h'
+        probe_impl.framework = ['ProbeRenderingSDK']
     end
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
@@ -29,7 +30,7 @@ Pod::Spec.new do |s|
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
         probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
-        probe_sdk.dependency 'JTSImageViewController', '~> 0.1.0'
+#         probe_sdk.dependency 'JTSImageViewController', '~> 0.1.0'
         probe_sdk.dependency 'Utilities', '~> 4.0.2'
         probe_sdk.compiler_flags = '-DDEBUG'
     end
@@ -61,6 +62,6 @@ Pod::Spec.new do |s|
 
 #   s.library = ['StudyWiseKit','ProbeRenderingSDK']
 
-  s.framework = ['JTSImageViewController','Utilities', 'ProbeRenderingSDK']
+  s.framework = [Utilities', 'ProbeRenderingSDK']
 
 end
