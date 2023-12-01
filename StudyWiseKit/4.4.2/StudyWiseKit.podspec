@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
         probe_impl.dependency 'Utilities', '~> 4.0.2'
         probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.project_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
-        probe_impl.framework = ['ProbeRenderingSDK']
+        probe_impl.framework = ['ProbeRenderingSDK', 'Utilities']
     end
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
@@ -36,9 +36,6 @@ Pod::Spec.new do |s|
         probe_sdk.compiler_flags = '-DDEBUG'
     end
 
-    s.libraries = 'xml2'
-
-#     s.ios.project_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
     s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
                                                 '$SRCROOT/StudyWiseKit/ProbeRenderingSDK'
                                             ],
@@ -47,28 +44,8 @@ Pod::Spec.new do |s|
 
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
-#   s.libraries = ['ProbeImplementations','ProbeRenderingSDK']
+  s.libraries = ['ProbeImplementations','ProbeRenderingSDK']
 #
-  s.framework = ['Utilities', 'JTSImageViewController', 'ProbeRenderingSDK']
+#   s.framework = ['Utilities', 'JTSImageViewController', 'ProbeRenderingSDK']
 
 end
-
-#   s.dependency 'JTSImageViewController', '~> 0.1.0'
-#   s.dependency 'Utilities', '~> 4.0.2'
-
-#   s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'
-#   'FileEncryptor/**/*.{swift,h,m}'
-
-#   s.public_header_files = ['StudyWiseKit/**/*.h']
-#                           'FileEncryptor/**/*.h']
-
-
-
-#   s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources',
-#                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
-#                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText',
-#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-style.html',
-#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-script.html',
-#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-js-module.html',
-#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
-#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
