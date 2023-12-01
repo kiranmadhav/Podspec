@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
         probe_sdk.dependency 'JTSImageViewController'
         probe_sdk.dependency 'Utilities'
-        probe_sdk.swift_settings = { 'DEBUG' => 'DEBUG' }
+        probe_sdk.compiler_flags = '-DDEBUG'
     end
 
 
