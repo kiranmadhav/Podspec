@@ -11,14 +11,30 @@ Pod::Spec.new do |s|
   s.swift_version     = '5.0'
   s.ios.deployment_target = '14.0'
 
-  s.source_files = ['StudyWiseKit/**/*.{swift,h,m}',
-                   'FileEncryptor/**/*.{swift,h,m}']
+   s.subspec 'StudyWiseKit' do |studyWiseKit|
+      studyWiseKit.dependency 'JTSImageViewController', '~> 0.1.0'
+      studyWiseKit.dependency 'Utilities', '~> 4.0.2'
+      studyWiseKit.source_files = 'StudyWiseKit/**/*.{swift,h,m}'
+      studyWiseKit.public_header_files = 'StudyWiseKit/**/*.h'
+      studyWiseKit.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+      studyWiseKit.framework = ['ProbeRenderingSDK','ProbeImplementations']
+  end
 
-  s.public_header_files = ['StudyWiseKit/**/*.h',
-                          'FileEncryptor/**/*.h']
+  s.subspec 'FileEncryptor' do |fileEncryptor|
+      fileEncryptor.source_files = 'FileEncryptor/**/*.h'
+      studyWiseKit.public_header_files = 'FileEncryptor/**/*.h'
+  end
 
-  s.dependency 'JTSImageViewController', '~> 0.1.0'
-  s.dependency 'Utilities', '~> 4.0.2'
+
+
+#   s.source_files = ['StudyWiseKit/**/*.{swift,h,m}',
+#                    'FileEncryptor/**/*.{swift,h,m}']
+
+#   s.public_header_files = ['StudyWiseKit/**/*.h',
+#                           'FileEncryptor/**/*.h']
+
+#   s.dependency 'JTSImageViewController', '~> 0.1.0'
+#   s.dependency 'Utilities', '~> 4.0.2'
 
   s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources',
                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
@@ -29,7 +45,7 @@ Pod::Spec.new do |s|
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
-  s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+#   s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
   s.library = 'StudyWiseKit'
 
