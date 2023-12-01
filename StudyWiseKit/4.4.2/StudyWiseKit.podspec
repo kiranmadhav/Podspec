@@ -11,34 +11,16 @@ Pod::Spec.new do |s|
   s.swift_version    = '5.0'
   s.requires_arc     = true
 
-  s.dependency 'JTSImageViewController', '~> 0.1.0'
-  s.dependency 'Utilities', '~> 4.0.2'
+ 
+  s.source = { :git => 'git@github.mheducation.com:MHEducation/StudyWiseKit.git', :tag => spec.version.to_s }
 
-  s.subspec 'ProbeImplementations' do |probe_impl|
-    probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.swift'
-    probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
-    probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
-    probe_impl.dependency 'Utilities'
-    probe_impl.dependency 'ProbeRenderingSDK'
-  end
+  s.source_files = 'StudyWiseKit/ProbeImplementations/**/*.{h,m,c,swift}', 'StudyWiseKit/ProbeRenderingSDK/**/*.{h,m,c,swift}'
+  s.resources = 'StudyWiseKit/ProbeImplementations/PackageResources/**/*', 'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/**/*.{html,js}'
+  s.exclude_files = ['StudyWiseKit/ProbeImplementations/Info.plist', 'StudyWiseKit/ProbeRenderingSDK/Info.plist']
 
-  s.subspec 'ProbeRenderingSDK' do |probe_sdk|
-    probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.swift'
-    probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
-    probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
-                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
-                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
-                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
-                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
-    probe_sdk.dependency 'JTSImageViewController'
-    probe_sdk.dependency 'Utilities'
-    probe_sdk.compiler_flags = '-DDEBUG'
-  end
+  s.dependency 'JTSImageViewController', :git => 'git@github.mheducation.com:MHEducation/JTSImageViewController.git', :branch => 'main'
+  s.dependency 'Utilities', :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'master'
 
-  s.test_spec 'Tests' do |tests|
-    tests.source_files = 'StudyWiseKit/ProbeImplementationsTests/**/*.swift'
-    tests.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/Info.plist'
-    tests.dependency 'ProbeImplementations'
-    tests.dependency 'ProbeRenderingSDK'
-  end
+  s.library 'ProbeImplementations', :targets => ['ProbeImplementations']
+  s.library 'ProbeRenderingSDK', :targets => ['ProbeRenderingSDK']
 end
