@@ -1,30 +1,39 @@
 Pod::Spec.new do |s|
-  s.name             = 'StudyWiseKit'
-  s.version          = '4.4.2'
-  s.summary          = 'A brief description of StudyWiseKit.'
-  s.homepage         = 'https://github.mheducation.com/MHEducation/studywisekit-ios'
-  s.platform         = :ios, '13.0'
-  s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
-  s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
-  s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
+    s.name             = 'StudyWiseKit'
+    s.version          = '4.4.2'
+    s.summary          = 'A brief description of StudyWiseKit.'
+    s.homepage         = 'https://github.mheducation.com/MHEducation/studywisekit-ios'
+    s.platform         = :ios, '13.0'
+    s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
+    s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
+    s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
 
-  s.swift_version     = '5.0'
-  s.ios.deployment_target = '14.0'
+    s.swift_version     = '5.0'
+    s.ios.deployment_target = '14.0'
 
-   s.subspec 'StudyWiseKit' do |studyWiseKit|
-      studyWiseKit.dependency 'JTSImageViewController', '~> 0.1.0'
-      studyWiseKit.dependency 'Utilities', '~> 4.0.2'
-      studyWiseKit.source_files = 'StudyWiseKit/**/*.{swift,h,m}'
-      studyWiseKit.public_header_files = 'StudyWiseKit/**/*.h'
-      studyWiseKit.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
-      studyWiseKit.framework = ['ProbeRenderingSDK','ProbeImplementations']
-  end
+    s.dependency 'JTSImageViewController', '~> 0.1.0'
+    s.dependency 'Utilities', '~> 4.0.2'
 
-  s.subspec 'FileEncryptor' do |fileEncryptor|
-      fileEncryptor.source_files = 'FileEncryptor/**/*.h'
-      studyWiseKit.public_header_files = 'FileEncryptor/**/*.h'
-  end
+    s.subspec 'ProbeImplementations' do |probe_impl|
+        probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.swift'
+        probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
+        probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
+        probe_impl.dependency 'Utilities'
+        probe_impl.dependency 'ProbeRenderingSDK'
+    end
 
+    s.subspec 'ProbeRenderingSDK' do |probe_sdk|
+        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.swift'
+        probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
+        probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
+        probe_sdk.dependency 'JTSImageViewController'
+        probe_sdk.dependency 'Utilities'
+        probe_sdk.swift_settings = { 'DEBUG' => 'DEBUG' }
+    end
 
 
 #   s.source_files = ['StudyWiseKit/**/*.{swift,h,m}',
@@ -45,9 +54,9 @@ Pod::Spec.new do |s|
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
-#   s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+  s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
-  s.library = 'StudyWiseKit'
+#   s.library = 'StudyWiseKit'
 
   s.framework = ['JTSImageViewController','Utilities']
 
