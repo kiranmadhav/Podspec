@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
         probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
         probe_sdk.dependency 'JTSImageViewController', '~> 0.1.0'
         probe_sdk.dependency 'Utilities', '~> 4.0.2'
-        probe_impl.framework = ['JTSImageViewController','Utilities']
+        probe_sdk.framework = ['JTSImageViewController','Utilities']
         probe_sdk.compiler_flags = '-DDEBUG'
     end
 
