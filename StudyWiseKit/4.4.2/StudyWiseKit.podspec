@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
     end
 
 
-  s.source_files = ['FileEncryptor/**/*.{swift,h,m}']
+  s.source_files = 'FileEncryptor/**/*.{swift,h,m}'
 
   s.public_header_files = 'StudyWiseKit/**/*.h'
                           'FileEncryptor/**/*.h']
