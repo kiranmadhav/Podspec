@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
 
     s.libraries = 'xml2'
 
-    s.ios.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
+    s.ios.project_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
     s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
                                                 '$SRCROOT/StudyWiseKit/ProbeRenderingSDK'
                                             ],
