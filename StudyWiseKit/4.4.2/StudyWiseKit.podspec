@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities'
+        probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
 #         probe_impl.dependency 'ProbeRenderingSDK'
     end
 
@@ -30,6 +31,7 @@ Pod::Spec.new do |s|
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
+        probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
         probe_sdk.dependency 'JTSImageViewController'
         probe_sdk.dependency 'Utilities'
         probe_sdk.compiler_flags = '-DDEBUG'
