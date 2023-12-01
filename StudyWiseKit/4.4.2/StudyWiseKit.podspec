@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'FileEncryptor/**/*.{swift,h,m}'
 
-  s.public_header_files = 'StudyWiseKit/**/*.h'
+  s.public_header_files = 'StudyWiseKit/**/*.h',
                           'FileEncryptor/**/*.h']
 
   s.dependency 'JTSImageViewController', '~> 0.1.0'
