@@ -62,6 +62,6 @@ Pod::Spec.new do |s|
 
 #   s.library = ['StudyWiseKit','ProbeRenderingSDK']
 
-  s.framework = [Utilities', 'ProbeRenderingSDK']
+  s.framework = ['Utilities', 'ProbeRenderingSDK']
 
 end
