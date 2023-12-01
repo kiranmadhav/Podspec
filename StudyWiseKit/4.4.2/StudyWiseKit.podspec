@@ -18,6 +18,11 @@ Pod::Spec.new do |s|
   s.dependency 'JTSImageViewController', '~> 0.1.0'
   s.dependency 'Utilities', '~> 4.0.2'
 
-  s.vendored_frameworks = 'StudyWiseKit/ProbeImplementations/**/*.framework'
-  s.vendored_libraries = 'StudyWiseKit/ProbeImplementations/**/*.a'
+    s.ios.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
+    s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
+                                                '$SRCROOT/StudyWiseKit/ProbeRenderingSDK',
+                                            ]}
+
+#  s.vendored_frameworks = 'StudyWiseKit/ProbeImplementations/**/*.framework'
+#  s.vendored_libraries = 'StudyWiseKit/ProbeImplementations/**/*.a'
 end
