@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.dependency 'JTSImageViewController', '~> 0.1.0'
   s.dependency 'Utilities', '~> 4.0.2'
 
-  s.library 'ProbeImplementations', :targets => ['ProbeImplementations']
-  s.library 'ProbeRenderingSDK', :targets => ['ProbeRenderingSDK']
+  s.vendored_frameworks = 'StudyWiseKit/ProbeImplementations/**/*.framework'
+  s.vendored_libraries = 'StudyWiseKit/ProbeImplementations/**/*.a'
 end
