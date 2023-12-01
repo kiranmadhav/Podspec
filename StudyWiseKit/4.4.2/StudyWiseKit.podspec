@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementations/Info.plist'
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities', '~> 4.0.2'
-        probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
+#         probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.public_header_files = 'StudyWiseKit/**/*.h'
         probe_impl.framework = ['ProbeRenderingSDK']
     end
