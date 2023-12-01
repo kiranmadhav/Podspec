@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   s.resources = 'StudyWiseKit/ProbeImplementations/PackageResources/**/*', 'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/**/*.{html,js}'
   s.exclude_files = ['StudyWiseKit/ProbeImplementations/Info.plist', 'StudyWiseKit/ProbeRenderingSDK/Info.plist']
 
-  s.dependency 'JTSImageViewController', :git => 'git@github.mheducation.com:MHEducation/JTSImageViewController.git', :branch => 'main'
-  s.dependency 'Utilities', :git => 'git@github.mheducation.com:MHEducation/utilities-ios.git', :branch => 'master'
+  s.dependency 'JTSImageViewController', '~> 0.1.0'
+  s.dependency 'Utilities', '~> 4.0.2'
 
   s.library 'ProbeImplementations', :targets => ['ProbeImplementations']
   s.library 'ProbeRenderingSDK', :targets => ['ProbeRenderingSDK']
