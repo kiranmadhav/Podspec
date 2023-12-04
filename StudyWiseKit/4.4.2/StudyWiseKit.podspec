@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
 #     s.dependency 'StudyWiseKit/ProbeRenderingSDK'
 
 
-  s.source_files = 'StudyWiseKit/**/*.{swift,h,m}','FileEncryptor/**/*.{swift,h,m}'
+  s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
 
-  s.public_header_files = 'StudyWiseKit/**/*.h', 'FileEncryptor/**/*.h'
+  s.public_header_files = 'StudyWiseKit/**/*.h'#, 'FileEncryptor/**/*.h'
 
   s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
@@ -34,5 +34,7 @@ Pod::Spec.new do |s|
   s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
   s.compiler_flags = '-DDEBUG'
+
+  s.framework = ['JTSImageViewController', 'Utilities']
 
 end
