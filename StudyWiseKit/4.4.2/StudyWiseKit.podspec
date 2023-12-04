@@ -46,16 +46,23 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'ProbeImplementations' do |probe_impl|
-            probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
-            probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
-            probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
-            probe_impl.dependency 'Utilities', '~> 4.0.2'
-            probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
-            probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
-            probe_impl.framework = ['Utilities']
-            probe_impl.ios.vendored_frameworks = ['ProbeRenderingSDK']
-        end
-
+        probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
+        probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+#         probe_impl.resources     = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
+        probe_impl.dependency 'Utilities', '~> 4.0.2'
+        probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
+        probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
+        probe_impl.framework = ['Utilities', 'ProbeRenderingSDK']
+        probe_impl.resource_bundles = {
+                'PackageResources' => [
+                    'StudyWiseKit/ProbeImplementations/PackageResources/*'
+                    'StudyWiseKit/ProbeImplementations/**/*.xib',
+                    'StudyWiseKit/ProbeImplementations/**/*..xcassets',
+                    'StudyWiseKit/ProbeImplementations/**/*.plist'
+                ]
+            }
+    end
+    
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
     s.compiler_flags = '-DDEBUG'
