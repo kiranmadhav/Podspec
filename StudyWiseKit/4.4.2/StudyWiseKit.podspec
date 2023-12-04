@@ -32,18 +32,28 @@ Pod::Spec.new do |s|
         probe_sdk.compiler_flags = '-DDEBUG'
     end
 
-    s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
+    s.subspec 'ProbeImplementations' do |probe_impl|
+            probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
+            probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+            probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
+            probe_impl.dependency 'Utilities', '~> 4.0.2'
+            probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
+            probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
+            probe_impl.framework = ['ProbeRenderingSDK', 'Utilities']
+        end
 
-    s.public_header_files = 'StudyWiseKit/**/*.h'#, 'FileEncryptor/**/*.h'
+#     s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
 
-    s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
+#     s.public_header_files = 'StudyWiseKit/**/*.h'#, 'FileEncryptor/**/*.h'
+
+#     s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
 #                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
 #                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText',
-                 'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-style.html',
-                 'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-script.html',
-                 'StudyWiseKit/ProbeConsumption/SelectText/select-text-js-module.html',
-                 'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
-                 'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
+#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-style.html',
+#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-script.html',
+#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-js-module.html',
+#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
+#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
