@@ -30,9 +30,7 @@ Pod::Spec.new do |s|
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
-    s.ios.vendored_frameworks = 'StudyWiseKit/ProbeRenderingSDK.framework'
-
-    s.framework = ['JTSImageViewController', 'Utilities', 'ProbeRenderingSDK']
+    s.framework = ['JTSImageViewController', 'Utilities']
 
     s.xcconfig  = {'HEADER_SEARCH_PATHS' => ['$SRCROOT/StudyWiseKit/ProbeRenderingSDK']}
 
