@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
-#     s.dependency 'StudyWiseKit/ProbeRenderingSDK'
+    s.dependency 'StudyWiseKit/ProbeRenderingSDK'
 
     s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'   #,'FileEncryptor/**/*.{swift,h,m}'
 
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
-    s.framework = ['JTSImageViewController', 'Utilities']
+    s.framework = ['JTSImageViewController', 'Utilities', 'ProbeRenderingSDK']
 
     s.xcconfig  = {'HEADER_SEARCH_PATHS' => ['$SRCROOT/StudyWiseKit/ProbeRenderingSDK']}
 
