@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
         probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
         probe_impl.frameworks = ['Utilities', 'StudyWiseKit/ProbeRenderingSDK']
-        probe_sdk.resources   = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
+        probe_impl.resources   = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
                                  'StudyWiseKit/ProbeImplementations/**/*.xib',
                                  'StudyWiseKit/ProbeImplementations/**/*..xcassets']
 #         probe_impl.resource_bundles = {
