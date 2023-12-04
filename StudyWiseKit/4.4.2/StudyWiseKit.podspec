@@ -18,6 +18,9 @@ Pod::Spec.new do |s|
 
     s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
 
+    s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
+    s.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
+
     s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText',
