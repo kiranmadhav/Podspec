@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
 
     s.swift_version     = '5.0'
-    s.ios.deployment_target = '14.0'
 
 #     s.ios.public_header_files = 'StudyWiseKit/**/*.h'
 #
@@ -55,7 +54,7 @@ Pod::Spec.new do |s|
         probe_impl.framework = ['Utilities', 'ProbeRenderingSDK']
         probe_impl.resource_bundles = {
                 'PackageResources' => [
-                    'StudyWiseKit/ProbeImplementations/PackageResources/*'
+                    'StudyWiseKit/ProbeImplementations/PackageResources/*',
                     'StudyWiseKit/ProbeImplementations/**/*.xib',
                     'StudyWiseKit/ProbeImplementations/**/*..xcassets',
                     'StudyWiseKit/ProbeImplementations/**/*.plist'
