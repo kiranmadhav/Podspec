@@ -37,7 +37,6 @@ Pod::Spec.new do |s|
     end
 
   s.libraries = ['ProbeImplementations','ProbeRenderingSDK']
-#
-#   s.framework = ['Utilities', 'JTSImageViewController', 'ProbeRenderingSDK']
+  s.framework = ['Utilities', 'JTSImageViewController', 'ProbeImplementations']
 
 end
