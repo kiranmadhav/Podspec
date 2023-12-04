@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
 
     s.swift_version     = '5.0'
-#    s.ios.deployment_target = '14.0'
+ #   s.ios.deployment_target = '14.0'
 
 #     s.ios.public_header_files = 'StudyWiseKit/**/*.h'
 #
@@ -41,32 +41,30 @@ Pod::Spec.new do |s|
         probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
         probe_sdk.dependency 'JTSImageViewController', '~> 0.1.0'
         probe_sdk.dependency 'Utilities', '~> 4.0.2'
-        probe_sdk.framework = ['JTSImageViewController','Utilities']
+        probe_sdk.frameworks = ['JTSImageViewController','Utilities']
         probe_sdk.compiler_flags = '-DDEBUG'
     end
 
     s.subspec 'ProbeImplementations' do |probe_impl|
         probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
-#         probe_impl.resources     = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities', '~> 4.0.2'
         probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
-        probe_impl.framework = ['Utilities', 'ProbeRenderingSDK']
+        probe_impl.frameworks = ['Utilities', 'ProbeRenderingSDK']
         probe_impl.resource_bundles = {
                 'PackageResources' => [
                     'StudyWiseKit/ProbeImplementations/PackageResources/*',
                     'StudyWiseKit/ProbeImplementations/**/*.xib',
-                    'StudyWiseKit/ProbeImplementations/**/*..xcassets',
-                    'StudyWiseKit/ProbeImplementations/**/*.plist'
+                    'StudyWiseKit/ProbeImplementations/**/*..xcassets'
                 ]
             }
     end
-    
+
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
     s.compiler_flags = '-DDEBUG'
 
-    s.framework = ['JTSImageViewController', 'Utilities']
+    s.frameworks = ['JTSImageViewController', 'Utilities']
 
 end
