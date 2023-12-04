@@ -11,11 +11,24 @@ Pod::Spec.new do |s|
     s.swift_version     = '5.0'
     s.ios.deployment_target = '14.0'
 
-    s.ios.public_header_files = 'StudyWiseKit/**/*.h'
+#     s.ios.public_header_files = 'StudyWiseKit/**/*.h'
+#
+#     s.dependency 'JTSImageViewController', '~> 0.1.0'
+#     s.dependency 'Utilities', '~> 4.0.2'
+#     s.dependency 'StudyWiseKit/ProbeRenderingSDK'
 
-    s.dependency 'JTSImageViewController', '~> 0.1.0'
-    s.dependency 'Utilities', '~> 4.0.2'
-    s.dependency 'StudyWiseKit/ProbeRenderingSDK'
+#     s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
+
+#     s.public_header_files = 'StudyWiseKit/**/*.h'#, 'FileEncryptor/**/*.h'
+
+#     s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
+#                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
+#                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText',
+#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-style.html',
+#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-script.html',
+#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-js-module.html',
+#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
+#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
         probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h,m}'
@@ -41,19 +54,6 @@ Pod::Spec.new do |s|
             probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
             probe_impl.framework = ['ProbeRenderingSDK', 'Utilities']
         end
-
-#     s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
-
-#     s.public_header_files = 'StudyWiseKit/**/*.h'#, 'FileEncryptor/**/*.h'
-
-#     s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
-#                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
-#                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText',
-#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-style.html',
-#                  'StudyWiseKit/ProbeConsumption/FillIn/fillin-template-script.html',
-#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-js-module.html',
-#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-style.html',
-#                  'StudyWiseKit/ProbeConsumption/SelectText/select-text-native.html']
 
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
