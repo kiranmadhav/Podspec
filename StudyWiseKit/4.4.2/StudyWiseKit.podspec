@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
-    s.dependency 'StudyWiseKit/ProbeRenderingSDK'
+    
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
         probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h,m}'
@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
         probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
         probe_sdk.dependency 'JTSImageViewController', '~> 0.1.0'
         probe_sdk.dependency 'Utilities', '~> 4.0.2'
+        probe_sdk.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_sdk.framework = ['JTSImageViewController','Utilities']
         probe_sdk.compiler_flags = '-DDEBUG'
     end
@@ -49,6 +50,6 @@ Pod::Spec.new do |s|
 
     s.compiler_flags = '-DDEBUG'
 
-    s.framework = ['JTSImageViewController', 'Utilities', 'ProbeRenderingSDK']
+    s.framework = ['JTSImageViewController', 'Utilities']
 
 end
