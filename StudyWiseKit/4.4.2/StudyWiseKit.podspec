@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
         probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
         probe_impl.dependency 'Utilities', '~> 4.0.2'
-#         probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
+        probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.project_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
         probe_impl.frameworks = ['Utilities', 'ProbeRenderingSDK']
         probe_impl.resources   = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
@@ -39,9 +39,9 @@ Pod::Spec.new do |s|
 
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
-    s.dependency 'StudyWiseKit/ProbeRenderingSDK'
+#     s.dependency 'StudyWiseKit/ProbeRenderingSDK'
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
     s.compiler_flags = '-DDEBUG'
 
-    s.frameworks = ['JTSImageViewController', 'Utilities', 'ProbeRenderingSDK']
+    s.frameworks = ['JTSImageViewController', 'Utilities']
 end
