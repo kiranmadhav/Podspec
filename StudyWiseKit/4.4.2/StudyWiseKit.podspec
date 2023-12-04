@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
     s.dependency 'Utilities', '~> 4.0.2'
 #     s.dependency 'StudyWiseKit/ProbeRenderingSDK'
 
-    s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'#,'FileEncryptor/**/*.{swift,h,m}'
+    s.source_files = 'StudyWiseKit/**/*.{swift,h,m}'   #,'FileEncryptor/**/*.{swift,h,m}'
 
-    s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
-#     s.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
+    s.exclude_files = ['StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}',
+                       'StudyWiseKit/ProbeRenderingSDK/Info.plist']
 
     s.resources = ['StudyWiseKit/ProbeImplementations/PackageResources/*',
                  'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn',
@@ -32,9 +32,6 @@ Pod::Spec.new do |s|
 
     s.framework = ['JTSImageViewController', 'Utilities']
 
-    s.xcconfig  = {'HEADER_SEARCH_PATHS' => [
-                                                    '$SRCROOT/StudyWiseKit/ProbeRenderingSDK',
-                                                ],
-                       'OTHER_LDFLAGS' => '-lxml2'}
+    s.xcconfig  = {'HEADER_SEARCH_PATHS' => ['$SRCROOT/StudyWiseKit/ProbeRenderingSDK']
 
 end
