@@ -56,8 +56,6 @@ Pod::Spec.new do |s|
             probe_impl.ios.vendored_frameworks = ['ProbeRenderingSDK']
         end
 
-    s.resource_bundles
-
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
 
     s.compiler_flags = '-DDEBUG'
