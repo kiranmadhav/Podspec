@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
 
     s.swift_version     = '5.0'
+#    s.ios.deployment_target = '14.0'
 
 #     s.ios.public_header_files = 'StudyWiseKit/**/*.h'
 #
