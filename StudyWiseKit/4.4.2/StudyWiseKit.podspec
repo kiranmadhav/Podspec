@@ -32,6 +32,6 @@ Pod::Spec.new do |s|
 
     s.framework = ['JTSImageViewController', 'Utilities']
 
-    s.xcconfig  = {'HEADER_SEARCH_PATHS' => ['$SRCROOT/StudyWiseKit/ProbeRenderingSDK']
+    s.xcconfig  = {'HEADER_SEARCH_PATHS' => ['$SRCROOT/StudyWiseKit/ProbeRenderingSDK']}
 
 end
