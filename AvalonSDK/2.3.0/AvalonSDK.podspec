@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '14.0'
 
   s.source = { :git => 'git@github.mheducation.com:MHEducation/avalon-delivery-ios.git', :tag => s.version.to_s }
 #
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'AvalonSDK/Info.plist',
                        'AvalonSDK/Shared/**/*'
 
-#    s.dependency 'StudyWiseKit', '~> 4.4.2'
+    s.dependency 'StudyWiseKit', '~> 4.4.2'
     s.dependency 'ProbeImplementations', '~> 4.4.2'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.2'
     s.dependency 'Utilities', '~> 4.0.2'
