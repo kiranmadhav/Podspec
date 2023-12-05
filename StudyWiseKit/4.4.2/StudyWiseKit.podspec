@@ -10,12 +10,27 @@ Pod::Spec.new do |s|
 
     s.swift_version     = '5.0'
 
+    s.subspec 'ProbeRenderingSDK' do |probe_sdk|
+        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h,m}'
+        probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
+        probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
+                                   'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
+        probe_sdk.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
+        probe_sdk.dependency 'JTSImageViewController', '~> 0.1.0'
+        probe_sdk.dependency 'Utilities', '~> 4.0.2'
+        probe_sdk.framework = ['JTSImageViewController','Utilities']
+        probe_sdk.compiler_flags = '-DDEBUG'
+    end
+
     s.subspec 'ProbeImplementations' do |probe_impl|
         probe_impl.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
         probe_impl.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
         probe_impl.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
         probe_impl.dependency 'Utilities', '~> 4.0.2'
-        probe_impl.dependency 'ProbeRenderingSDK', '~> 4.4.2'
+        probe_impl.dependency 'StudyWiseKit/ProbeRenderingSDK'
         probe_impl.public_header_files = 'StudyWiseKit/ProbeImplementations/**/*.h'
         probe_impl.framework = ['ProbeRenderingSDK', 'Utilities']
     end
