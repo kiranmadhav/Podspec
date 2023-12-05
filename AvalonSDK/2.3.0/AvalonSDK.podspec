@@ -15,12 +15,12 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'AvalonSDK/Info.plist',
                        'AvalonSDK/Shared/**/*'
 
-    s.dependency 'StudyWiseKit', '~> 4.4.2'
+    s.dependency 'StudyWiseKit/ProbeImplementations', '~> 4.4.2'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.2'
     s.dependency 'Utilities', '~> 4.0.2'
     s.dependency 'Alamofire', '~> 4.9.1'
     s.dependency 'EPubReaderSDK', '~> 5.1.2'
-    
+
     s.resources = 'Tutorial/BundledFiles', 'Shared/Javascript/calculon.mobile.js'
 
     s.exclude_files = 'AvalonSDK/Info.plist', 'Shared/Javascript/package.json'
