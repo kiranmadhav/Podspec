@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.exclude_files = 'StudyWiseKit/ProbeImplementationsTests/*.{swift,plist}'
     s.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
     s.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
-    s.dependency 'ProbeRenderingSDK', '~> 4.2.2'
+    s.dependency 'ProbeRenderingSDK', '~> 4.4.2'
     s.dependency 'Utilities', '~> 4.0.2'
     s.framework = ['ProbeRenderingSDK','Utilities']
     s.compiler_flags = '-DDEBUG'
