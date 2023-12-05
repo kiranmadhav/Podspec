@@ -7,10 +7,7 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
     s.author           = { 'Kiran Madhav' => 'kiran.madhav@mheducation.com' }
     s.source           = { :git => 'git@github.mheducation.com:MHEducation/studywisekit-ios.git', :tag => s.version.to_s }
-
     s.swift_version     = '5.0'
-
-    s.source_files  = 'StudyWiseKit/**/*.{swift,h,m}'
 
     s.dependency 'ProbeImplementations', '~> 4.4.2'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.2'
