@@ -33,7 +33,9 @@ Pod::Spec.new do |s|
     s.framework = ['JTSImageViewController', 'Utilities']
 
     s.xcconfig  = {'HEADER_SEARCH_PATHS' => ['$SRCROOT/StudyWiseKit/ProbeRenderingSDK',
-                                             '$SRCROOT/StudyWiseKit/ProbeImplementations'    
+                                             '$SRCROOT/StudyWiseKit/ProbeImplementations'
                                              ]}
+                                             
+    s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 
 end
