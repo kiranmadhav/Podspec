@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.swift_version     = '5.0'
 
     s.subspec 'ProbeRenderingSDK' do |probe_sdk|
-        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h,m}'
+        probe_sdk.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.*'
         probe_sdk.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
         probe_sdk.resources      = ['StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-style.html',
                                    'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/FillIn/fillin-template-script.html',
