@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.preserve_paths = 'AvalonSDK/Info.plist',
                        'AvalonSDK/Shared/**/*'
 
-//    s.dependency 'StudyWiseKit', '~> 4.4.2'
+#    s.dependency 'StudyWiseKit', '~> 4.4.2'
     s.dependency 'ProbeImplementations', '~> 4.4.2'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.2'
     s.dependency 'Utilities', '~> 4.0.2'
