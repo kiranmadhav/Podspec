@@ -10,9 +10,12 @@ Pod::Spec.new do |s|
 
     s.swift_version     = '5.0'
 
-    s.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.*'
+    s.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h}'
     s.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
-    s.resources      = ['StudyWiseKit/ProbeRenderingSDK/**/*.{xcassets,html,storyboard,}']
+    
+    s.resources      = ['StudyWiseKit/ProbeRenderingSDK/**/*.{xib,html,storyboard}',
+                        'StudyWiseKit/ProbeRenderingSDK/PackageResources',
+                        'StudyWiseKit/ProbeConsumption/SelectText']
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
     s.compiler_flags = '-DDEBUG'
