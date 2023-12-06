@@ -16,7 +16,9 @@ Pod::Spec.new do |s|
     s.dependency 'ProbeImplementations', '~> 4.4.3'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.3'
     s.resources = ['AvalonSDK/Tutorial/BundledFiles',
-                   'AvalonSDK/Shared/Javascript/calculon.mobile.js']
+                   'AvalonSDK/Shared/Javascript/calculon.mobile.js',
+                   'AvalonSDK/**/*.xib',
+                   'AvalonSDK/**/*.storyboard']
 
     s.exclude_files = 'AvalonSDK/Info.plist', 'Shared/Javascript/package.json'
     s.compiler_flags = '-DDEBUG'
