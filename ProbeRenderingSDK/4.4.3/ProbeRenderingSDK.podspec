@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-js-module.html',
                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-style.html',
                                'StudyWiseKit/ProbeRenderingSDK/ProbeConsumption/SelectText/select-text-native.html']
-    s.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
+  #  s.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
     s.compiler_flags = '-DDEBUG'
