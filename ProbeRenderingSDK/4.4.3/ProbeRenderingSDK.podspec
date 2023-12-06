@@ -21,8 +21,5 @@ Pod::Spec.new do |s|
     s.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
-    s.framework = ['JTSImageViewController','Utilities']
     s.compiler_flags = '-DDEBUG'
-
-    s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
