@@ -26,5 +26,5 @@ s.exclude_files = 'AvalonSDK/Info.plist', 'Shared/Javascript/package.json'
 
 s.compiler_flags = '-DDEBUG'
 
-s.framework = ['Utilities', 'Alamofire', 'EPubReaderSDK']
+s.frameworks = ['Utilities', 'Alamofire', 'EPubReaderSDK']
 end
