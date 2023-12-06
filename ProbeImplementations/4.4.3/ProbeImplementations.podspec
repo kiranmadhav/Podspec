@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
     s.source_files  = 'StudyWiseKit/ProbeImplementations/**/*.{swift,h,m}'
     s.resources      = 'StudyWiseKit/ProbeImplementations/PackageResources/*'
-    s.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
+#    s.public_header_files = 'StudyWiseKit/ProbeRenderingSDK/**/*.h'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.3'
     s.dependency 'Utilities', '~> 4.0.2'
     s.compiler_flags = '-DDEBUG'
