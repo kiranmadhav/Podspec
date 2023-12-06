@@ -11,9 +11,9 @@ s.ios.deployment_target = '14.0'
 
 s.source = { :git => 'git@github.mheducation.com:MHEducation/avalon-delivery-ios.git', :tag => s.version.to_s }
 #
-    s.source_files =  'AvalonSDK/**/*.{swift,h}'
-    s.preserve_paths = 'AvalonSDK/Info.plist',
-                        'AvalonSDK/Shared/**/*'
+#    s.source_files =  'AvalonSDK/**/*.{swift,h}'
+#    s.preserve_paths = 'AvalonSDK/Info.plist',
+#                        'AvalonSDK/Shared/**/*'
 
 s.dependency 'StudyWiseKit', '~> 4.4.2'
 s.dependency 'Utilities', '~> 4.0.2'
