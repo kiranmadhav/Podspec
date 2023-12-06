@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
     s.resources = ['AvalonSDK/Tutorial/BundledFiles',
                    'AvalonSDK/Shared/Javascript/calculon.mobile.js',
                    'AvalonSDK/**/*.xib',
-                   'AvalonSDK/**/*.storyboard']
+                   'AvalonSDK/**/*.storyboard',
+                   'AvalonSDK/Resources/Assets.xcassets']
 
     s.exclude_files = 'AvalonSDK/Info.plist', 'Shared/Javascript/package.json'
     s.compiler_flags = '-DDEBUG'
