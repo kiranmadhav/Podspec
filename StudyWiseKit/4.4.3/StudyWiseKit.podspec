@@ -11,6 +11,4 @@ Pod::Spec.new do |s|
 
     s.dependency 'ProbeImplementations', '~> 4.4.3'
     s.dependency 'ProbeRenderingSDK', '~> 4.4.3'
-    s.framework = ['ProbeImplementations', 'ProbeRenderingSDK']
-    s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
