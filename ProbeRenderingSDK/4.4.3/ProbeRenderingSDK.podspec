@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
     s.source_files  = 'StudyWiseKit/ProbeRenderingSDK/**/*.{swift,h}'
     s.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
-    
+
     s.resources      = ['StudyWiseKit/ProbeRenderingSDK/**/*.{xib,html,storyboard}',
                         'StudyWiseKit/ProbeRenderingSDK/PackageResources',
                         'StudyWiseKit/ProbeConsumption/SelectText']
