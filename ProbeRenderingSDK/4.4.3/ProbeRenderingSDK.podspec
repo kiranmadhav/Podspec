@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.exclude_files = 'StudyWiseKit/ProbeRenderingSDK/Info.plist'
 
     s.resources      = ['StudyWiseKit/ProbeRenderingSDK/**/*.{xib,html,storyboard}',
-                        'StudyWiseKit/ProbeRenderingSDK/PackageResources',
+                        'StudyWiseKit/ProbeRenderingSDK/PackageResources/ProbesMedia.xcassets',
                         'StudyWiseKit/ProbeConsumption/SelectText']
     s.dependency 'JTSImageViewController', '~> 0.1.0'
     s.dependency 'Utilities', '~> 4.0.2'
