@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}','Utilities/Utilities/PackageResources/**/*.{swift,h,m}'
   s.resources = [
        'Utilities/Utilities/**/*.xib',
-       'Utilities/Utilities/**/*.xcassets'
+       'Utilities/Utilities/**/*.xcassets',
        'Utilities/Utilities/PackageResources/**/*.*'
     ]
 end
