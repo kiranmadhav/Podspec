@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Utilities'
-  s.version          = '4.0.3'
+  s.version          = '4.0.2'
   s.summary          = 'Utilities'
   s.homepage         = 'https://github.mheducation.com:MHEducation/utilities-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
