@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}'
-  s.resources = [
-       'Utilities/Utilities/**/*.xib',
-       'Utilities/Utilities/**/*.xcassets',
-       'Utilities/Utilities/PackageResources/js/vendor/mathjax/*',
-    ]
+
+  s.resources = 'Utilities/Utilities/**/*.xib',
+                'Utilities/Utilities/**/*.xcassets',
+                'Utilities/Utilities/PackageResources/js/vendor/mathjax/*',
+                'Utilities/Utilities/PackageResources/js/vendor/music-rendering/*'
 end
