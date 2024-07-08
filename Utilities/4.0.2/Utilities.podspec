@@ -15,6 +15,5 @@ Pod::Spec.new do |s|
 
   s.resources = 'Utilities/Utilities/**/*.xib',
                 'Utilities/Utilities/**/*.xcassets',
-                'Utilities/Utilities/PackageResources/js/vendor/mathjax/*',
-                'Utilities/Utilities/PackageResources/js/vendor/music-rendering/*'
+                'Utilities/Utilities/PackageResources/js'
 end
