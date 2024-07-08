@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}','Utilities/Utilities/PackageResources/**/*.{swift,h,m}'
+  s.preserve_paths = 'Utilities/Utilities/PackageResources/**'
   s.resources = [
        'Utilities/Utilities/**/*.xib',
        'Utilities/Utilities/**/*.xcassets',
