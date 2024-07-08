@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.resources = [
        'Utilities/Utilities/**/*.xib',
        'Utilities/Utilities/**/*.xcassets',
-       'Utilities/Utilities/PackageResources/**/*',
+       'Utilities/Utilities/PackageResources/js/vendor/mathjax/*',
     ]
 end
