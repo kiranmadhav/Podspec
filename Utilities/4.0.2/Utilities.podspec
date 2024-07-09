@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.source_files = 'Utilities/Utilities/**/*.{swift,h,m}'
   s.resources = 'Utilities/Utilities/Views/*.xib',
-                'Utilities/Utilities/PackageResources/js'
+                'Utilities/Utilities/PackageResources'
 end
