@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
     s.source_files =  'AvalonSDK/**/*.{swift,h}'
     s.dependency 'Utilities', '~> 4.0.2'
     s.dependency 'Alamofire', '~> 4.9.1'
-    s.dependency 'EPubReaderSDK', '~> 5.1.2'
-    s.dependency 'ProbeImplementations', '~> 4.4.4'
-    s.dependency 'ProbeRenderingSDK', '~> 4.4.4'
+    s.dependency 'EPubReaderSDK', '~> 5.1.4'
+    s.dependency 'ProbeImplementations', '~> 4.4.5'
+    s.dependency 'ProbeRenderingSDK', '~> 4.4.5'
     s.resources = ['AvalonSDK/Tutorial/BundledFiles',
                    'AvalonSDK/Shared/Javascript/calculon.mobile.js',
                    'AvalonSDK/**/*.xib',
